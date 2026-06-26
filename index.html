@@ -809,31 +809,31 @@
     <div class="gallery-grid reveal">
       <!-- LARGE left -->
       <div class="gallery-item gallery-large">
-        <img src="C:\Users\Rahul\Desktop\Farm\Oysterfarm\6.jpeg" alt="Farm photo 1" loading="lazy"/>
+        <img src="6.jpeg" alt="A person holding a fresh cluster of oyster mushrooms outdoors." loading="lazy"/>
         <div class="gallery-label">Inside the fruiting chamber</div>
       </div>
       <!-- RIGHT column stacked -->
       <div class="gallery-stack">
         <div class="gallery-item">
-          <img src="C:\Users\Rahul\Desktop\Farm\Oysterfarm\2.jpeg" alt="Farm photo 2" loading="lazy"/>
+          <img src="2.jpeg" alt="A large, healthy cluster of white oyster mushrooms growing from a substrate bag." loading="lazy"/>
           <div class="gallery-label">Fresh golden oyster clusters</div>
         </div>
         <div class="gallery-item">
-          <img src="C:\Users\Rahul\Desktop\Farm\Oysterfarm\3.jpeg" alt="Farm photo 3" loading="lazy"/>
+          <img src="3.jpeg" alt="An overhead view of several substrate bags with mushrooms pinning." loading="lazy"/>
           <div class="gallery-label">Harvest day packing</div>
         </div>
       </div>
       <!-- BOTTOM row -->
       <div class="gallery-item gallery-bottom">
-        <img src="C:\Users\Rahul\Desktop\Farm\Oysterfarm\4.jpeg" alt="Farm photo 4" loading="lazy"/>
+        <img src="4.jpeg" alt="A close-up of grey oyster mushrooms growing in the farm." loading="lazy"/>
         <div class="gallery-label">Pink oysters at peak ripeness</div>
       </div>
       <div class="gallery-item gallery-bottom">
-        <img src="C:\Users\Rahul\Desktop\Farm\Oysterfarm\5.jpeg" alt="Farm photo 5" loading="lazy"/>
+        <img src="5.jpeg" alt="A cluster of young, white oyster mushrooms with round caps." loading="lazy"/>
         <div class="gallery-label">Substrate preparation</div>
       </div>
       <div class="gallery-item gallery-bottom">
-        <img src="C:\Users\Rahul\Desktop\Farm\Oysterfarm\1.jpeg" alt="Farm photo 6" loading="lazy"/>
+        <img src="1.jpeg" alt="A view from below of a large mushroom cluster hanging from a thatched roof." loading="lazy"/>
         <div class="gallery-label">Ready for delivery</div>
       </div>
     </div>
@@ -925,7 +925,7 @@
 <!-- FOOTER -->
 <footer>
   <div class="footer-brand">Oyster<span> </span>Farm Mushroom Farm</div>
-  <p class="footer-copy">© 2024 · Fresh oyster mushrooms · Grown with care</p>
+  <p class="footer-copy">© <span id="copyright-year">2024</span> · Fresh oyster mushrooms · Grown with care</p>
   <ul class="footer-links">
     <li><a href="https://instagram.com/oyster_farm" target="_blank" rel="noopener">Instagram</a></li>
     <li><a href="#">Markets</a></li>
@@ -941,6 +941,8 @@
     entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); } });
   }, { threshold: 0.1 });
   document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+  document.getElementById('copyright-year').textContent = new Date().getFullYear();
 </script>
 </body>
 </html>
