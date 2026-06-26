@@ -461,14 +461,14 @@
 
   @media (max-width: 880px) {
     .gallery-grid {
-      grid-template-columns: 1fr 1fr;
-      grid-template-rows: auto;
+      display: flex;
+      flex-direction: column;
     }
-    .gallery-large { grid-column: 1 / 3; }
-    .gallery-large img { height: 240px; }
-    .gallery-stack { grid-column: 1 / 3; flex-direction: row; }
-    .gallery-stack .gallery-item img { height: 160px; }
-    .gallery-bottom img { height: 160px; }
+    .gallery-large, .gallery-stack, .gallery-bottom {
+      grid-column: auto; /* Reset grid properties */
+      grid-row: auto;
+    }
+    .gallery-item img { height: 250px; } /* Set a consistent height for all mobile images */
     .insta-grid { grid-template-columns: repeat(3, 1fr); }
     .insta-header { flex-direction: column; align-items: flex-start; }
     .section-forest { padding: 4rem 1.5rem; }
